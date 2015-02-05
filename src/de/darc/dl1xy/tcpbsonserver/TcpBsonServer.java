@@ -13,7 +13,7 @@ import io.netty.handler.logging.LoggingHandler;
 
 import java.util.Properties;
 
-import de.darc.dl1xy.tcpbsonserver.netty.JomeiServerInitializer;
+import de.darc.dl1xy.tcpbsonserver.netty.TcpBsonServerInitializer;
 import de.darc.dl1xy.tcpbsonserver.util.PropertyReader;
 
 public class TcpBsonServer {
@@ -47,7 +47,7 @@ public class TcpBsonServer {
 				
 				try {
 					
-					final JomeiServerInitializer tcpInitializer = new JomeiServerInitializer();
+					final TcpBsonServerInitializer tcpInitializer = new TcpBsonServerInitializer();
 					
 					// tcp
 					final ServerBootstrap b = new ServerBootstrap();

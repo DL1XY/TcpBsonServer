@@ -8,14 +8,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.undercouch.bson4jackson.BsonFactory;
 
-public class JomeiServerInitializer extends ChannelInitializer<SocketChannel> {
+public class TcpBsonServerInitializer extends ChannelInitializer<SocketChannel> {
 
 	@Override
 	public void initChannel(final SocketChannel ch) throws Exception {
 		
 		final BsonFactory factory = new BsonFactory();
 		final ObjectMapper mapper = new ObjectMapper(factory);
-		final JomeiServerHandler serverHandler = new JomeiServerHandler(factory, mapper, ch);
+		final TcpBsonServerHandler serverHandler = new TcpBsonServerHandler(factory, mapper, ch);
 		
 		final ChannelPipeline pipeline = ch.pipeline();
 		pipeline.addLast(new ByteToBSONDecoder(serverHandler));

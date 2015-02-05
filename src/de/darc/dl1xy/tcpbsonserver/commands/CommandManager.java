@@ -3,7 +3,7 @@ package de.darc.dl1xy.tcpbsonserver.commands;
 import de.darc.dl1xy.tcpbsonserver.commands.client.BaseClientCmd;
 import de.darc.dl1xy.tcpbsonserver.commands.client.IClientCmd;
 import de.darc.dl1xy.tcpbsonserver.exceptions.ExceptionManager;
-import de.darc.dl1xy.tcpbsonserver.netty.JomeiServerHandler;
+import de.darc.dl1xy.tcpbsonserver.netty.TcpBsonServerHandler;
 
 /**
  * CommandManager handles the outgoing commands and delegates them to the netty handler 
@@ -19,9 +19,9 @@ public class CommandManager
 
 	private ExceptionManager _excMgr;
 	private int currentServerCmdId;
-	private JomeiServerHandler _handler;
+	private TcpBsonServerHandler _handler;
 	
-	public CommandManager(final JomeiServerHandler handler)
+	public CommandManager(final TcpBsonServerHandler handler)
 	{
 		this._handler = handler;	
 		this._excMgr = new ExceptionManager();

@@ -25,7 +25,7 @@ import de.darc.dl1xy.tcpbsonserver.gameplay.Gameplay;
 import de.undercouch.bson4jackson.BsonFactory;
 
 @Sharable
-public class JomeiServerHandler extends ChannelInboundHandlerAdapter {
+public class TcpBsonServerHandler extends ChannelInboundHandlerAdapter {
 
 	private SocketChannel socketChannel;
 	private Channel channel;
@@ -34,7 +34,7 @@ public class JomeiServerHandler extends ChannelInboundHandlerAdapter {
 	private BsonFactory factory; 
 	private ObjectMapper mapper;
 	
-	public JomeiServerHandler(final BsonFactory factory, final ObjectMapper mapper, final SocketChannel sc)
+	public TcpBsonServerHandler(final BsonFactory factory, final ObjectMapper mapper, final SocketChannel sc)
 	{
 		this.socketChannel = sc;
 		this.factory = factory;

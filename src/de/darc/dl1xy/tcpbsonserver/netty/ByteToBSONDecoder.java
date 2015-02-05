@@ -10,9 +10,9 @@ import java.util.List;
 
 public class ByteToBSONDecoder extends ReplayingDecoder<ByteBuf> 
 {
-	private JomeiServerHandler serverHandler;
+	private TcpBsonServerHandler serverHandler;
 	
-	public ByteToBSONDecoder(final JomeiServerHandler serverHandler)
+	public ByteToBSONDecoder(final TcpBsonServerHandler serverHandler)
 	{
 		this.serverHandler = serverHandler;
 	}
