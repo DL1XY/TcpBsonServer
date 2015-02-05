@@ -16,12 +16,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import de.darc.dl1xy.tcpbsonserver.client.Client;
 import de.darc.dl1xy.tcpbsonserver.commands.CommandManager;
 import de.darc.dl1xy.tcpbsonserver.commands.client.IClientCmd;
 import de.darc.dl1xy.tcpbsonserver.commands.server.BaseServerCmd;
 import de.darc.dl1xy.tcpbsonserver.commands.server.IServerCmd;
 import de.darc.dl1xy.tcpbsonserver.commands.server.ServerCmdLogout;
-import de.darc.dl1xy.tcpbsonserver.gameplay.Gameplay;
 import de.undercouch.bson4jackson.BsonFactory;
 
 @Sharable
@@ -30,7 +30,7 @@ public class TcpBsonServerHandler extends ChannelInboundHandlerAdapter {
 	private SocketChannel socketChannel;
 	private Channel channel;
 	private CommandManager cmdMgr;
-	private Gameplay gameplay;
+	private Client gameplay;
 	private BsonFactory factory; 
 	private ObjectMapper mapper;
 	

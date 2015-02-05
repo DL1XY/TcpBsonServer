@@ -35,6 +35,7 @@ public class TcpBsonServer {
 				
 				if (props == null)
 				{
+					System.exit(-1);
 					return;
 				}
 						

@@ -1,7 +1,7 @@
 package de.darc.dl1xy.tcpbsonserver.commands.server;
 
+import de.darc.dl1xy.tcpbsonserver.client.Client;
 import de.darc.dl1xy.tcpbsonserver.commands.CommandManager;
-import de.darc.dl1xy.tcpbsonserver.gameplay.Gameplay;
 
 
 public abstract class BaseServerCmd implements IServerCmd {
@@ -12,7 +12,7 @@ public abstract class BaseServerCmd implements IServerCmd {
 	protected  CommandManager cmdMgr = null;
 	
 	
-	public void execute(final Gameplay gameplay, final CommandManager cmdMgr)
+	public void execute(final Client gameplay, final CommandManager cmdMgr)
 	{			
 		this.cmdMgr = cmdMgr;
 				
